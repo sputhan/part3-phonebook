@@ -90,7 +90,8 @@ const App = (props) => {
     if (window.confirm(`Delete ${person.name}`)) {
       personService.remove(person.id)
         .then(deletedPerson => {
-          setPersons(persons.filter(p => p.id !== deletedPerson.id))
+          console.log("deleted")
+          setPersons(persons.filter(p => p.id !== person.id))
         })
 
     }
